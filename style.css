@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin-top: 50px;
+    
+}
+#contact-box {
+    max-width: 916px;
+    border: 1px solid #333333;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 25px 15px 0 30px;
+    
+}    
+input[type=text], textarea {   
+    display: block;
+    margin: 20px;
+    padding: 5px 7px;
+}
+
+form {
+    
+    margin-left: 50px;
+}
+form > input, textarea {
+    width: 350px;
+    flex-grow: 2;
+}
+label {
+    margin: 0 15px 10px 20px;;
+}
+.gender {
+    margin-left: 80px;
+    display: block;
+
+}
+textarea {
+    padding: 5px;
+    border: 1px solid #000000;
+}
+img {
+    width: 400px;
+    height: 450px;
+}
+#succesMessage {
+    max-width: 916px; 
+    margin: 0 auto 10px;
+    background-color: #DEF0D8;
+    border-radius: 5px;
+    color: green;
+    padding: 10px;
+    visibility: hidden;
+}
+button {
+    float: right;
+    margin: 40px 20px 25px 0;
+    background-color: #1C9AB1;
+    color: #ffffff;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 5px;;
+}
+.fas {
+    margin: 5px 10px;
+}#close {
+    float: right;
+    font-size: 25px;
+    cursor: default;
+}
