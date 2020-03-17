@@ -13,12 +13,9 @@
         <form>
             <input type="text" class="valid invalid" autocomplete="off" name="firstName" id="firstName" placeholder="First Name">
             <input type="text" autocomplete="off" name="lastName" id="lastName" placeholder="Last Name">
-            <label>Gender</label>
-            <label class="gender">
-            <input type="radio" checked name="radio">M
-            </label>
-            <label class="gender">
-            <input type="radio" name="radio">F
+            <label>Gender <br />
+            <input type="radio" checked name="gender" value="M">M<br/>
+            <input type="radio" name="gender" value="F">F
             </label>
             <textarea id="userMessage" rows="10" placeholder="Your message here..."></textarea>
             <button type="button" onclick="succesMessage()">Submit</button>

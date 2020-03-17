@@ -2,7 +2,7 @@
 const firstName = document.querySelector('#firstName');
 const lastName = document.querySelector('#lastName');
 const userMessage = document.querySelector('#userMessage');
-
+const gender = document.getElementsByName("gender");
 
 firstName.addEventListener('blur', (e) => {
     if(firstName.value === "") {
@@ -47,10 +47,15 @@ function succesMessage() {
             document.querySelector("#succesMessage").style.visibility = "hidden";    
         })
     
+        for(let i=0; i < gender.length; i++) {
+            if(gender[i].checked) {
+                console.log(`First Name: ${firstName.value} \n 
+                Last Name: ${lastName.value} \n
+                Gender: ${gender[i].value} \n
+                Message: ${userMessage.value}`);        
+            }
+        }
         
-        
-        console.log(` First Name: ${firstName.value} \n Last Name: ${lastName.value} \n Message: ${userMessage.value}`);
-    
-    
+
     
 }
