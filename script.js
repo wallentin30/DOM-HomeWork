@@ -49,7 +49,8 @@ function succesMessage() {
     
         for(let i=0; i < gender.length; i++) {
             if(gender[i].checked) {
-                console.log(`First Name: ${firstName.value} \n 
+                console.log(` Contact Form Response \n 
+                First Name: ${firstName.value} \n 
                 Last Name: ${lastName.value} \n
                 Gender: ${gender[i].value} \n
                 Message: ${userMessage.value}`);        
