@@ -1,14 +1,12 @@
-
 const firstName = document.querySelector('#firstName');
 const lastName = document.querySelector('#lastName');
 const userMessage = document.querySelector('#userMessage');
 const gender = document.getElementsByName("gender");
-
+const formValues = document.querySelector('input');
 
 firstName.addEventListener('blur', (e) => {
-    if(firstName.value === "") {
+    if (firstName.value === "") {
         e.target.style.border = '1px solid red';
-        return;
     }
 
     if (firstName.value !== "") {
@@ -17,9 +15,8 @@ firstName.addEventListener('blur', (e) => {
 })
 
 lastName.addEventListener('blur', (e) => {
-    if(lastName.value === "") {
+    if (lastName.value === "") {
         e.target.style.border = '1px solid red';
-        return;
     }
 
     if (lastName.value !== "") {
@@ -28,9 +25,8 @@ lastName.addEventListener('blur', (e) => {
 })
 
 userMessage.addEventListener('blur', (e) => {
-    if(userMessage.value === "") {
+    if (userMessage.value === "") {
         e.target.style.border = '1px solid red';
-        return;
     }
 
     if (userMessage.value !== "") {
@@ -38,28 +34,27 @@ userMessage.addEventListener('blur', (e) => {
     }
 })
 
-    function succesMessage() {
-        const succesMessage = document.querySelector('#succesMessage');
+function checkForm() {
+    const succesMessage = document.querySelector('#succesMessage');
+    if (firstName.style.border === "1px solid red" || lastName.style.border === "1px solid red" ||
+        userMessage.style.border === "1px solid red" || formValues.value === "") {
+        alert('Please fill all inputs!Thank you!')
+    } else {
+        succesMessage.innerHTML = ` <i class="fas fa-check-circle"></i>
+            Thank you for contacting us, ${firstName.value} <span id="close">&#10005;</span>`;
+        succesMessage.style.visibility = "visible";
 
-        if(firstName.value ,lastName.value,userMessage.value === "") {
-                alert('Please fill the red border inputs!');       
-        }else{
-            succesMessage.innerHTML = ` <i class="fas fa-check-circle"></i>
-                Thank you for contacting us, ${firstName.value} <span id="close">&#10005;</span>`;
-            succesMessage.style.visibility = "visible";
-
-            document.querySelector("#close").addEventListener('click', function() {
-            document.querySelector("#succesMessage").style.visibility = "hidden";    
-            })
-            for(let i=0; i < gender.length; i++) {
-                if(gender[i].checked) {
-                    console.log(` Contact Form Response \n 
-                    First Name: ${firstName.value} \n 
-                    Last Name: ${lastName.value} \n
-                    Gender: ${gender[i].value} \n
-                    Message: ${userMessage.value}`);        
-                    }
-                }
+        document.querySelector("#close").addEventListener('click', function() {
+            document.querySelector("#succesMessage").style.visibility = "hidden";
+        })
+        for (let i = 0; i < gender.length; i++) {
+            if (gender[i].checked) {
+                console.log(` Contact Form Response \n 
+                First Name: ${firstName.value} \n 
+                Last Name: ${lastName.value} \n
+                Gender: ${gender[i].value} \n
+                Message: ${userMessage.value}`);
             }
-
+        }
+    }
 }

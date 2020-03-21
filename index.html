@@ -10,7 +10,7 @@
 <body>
     <p id="succesMessage"><span></span></p>
     <div id="contact-box">
-        <form>
+        <form name="myForm">
             <input type="text" class="valid invalid" autocomplete="off" name="firstName" id="firstName" placeholder="First Name">
             <input type="text" autocomplete="off" name="lastName" id="lastName" placeholder="Last Name">
             <label>Gender <br />
@@ -18,7 +18,7 @@
             <input type="radio" name="gender" value="F">F
             </label>
             <textarea id="userMessage" rows="10" placeholder="Your message here..."></textarea>
-            <button type="button" onclick="succesMessage()">Submit</button>
+            <button type="button" onclick="checkForm()">Submit</button>
         </form>
         <img src="images/image.png" />
     </div>
